@@ -51,5 +51,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "My project1.sln"
+    "dotnet.defaultSolution": "Remote-Code-Execution.sln"
 }
