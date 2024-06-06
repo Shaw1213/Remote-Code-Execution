@@ -46,8 +46,8 @@ public class CarController : MonoBehaviour
         }
 
         // Apply acceleration to front wheels
-        FLW.motorTorque = currentAcceleration;
-        FRW.motorTorque = currentAcceleration;
+        FLW.motorTorque = 3000;
+        FRW.motorTorque = 3000;
 
         // Apply braking to all wheels
         FLW.brakeTorque = currentBrakeForce;
