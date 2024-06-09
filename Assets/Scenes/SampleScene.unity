@@ -132,7 +132,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 42429679}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: WheelsCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -172,7 +172,7 @@ GameObject:
   - component: {fileID: 203137654}
   - component: {fileID: 203137653}
   - component: {fileID: 203137652}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: FRW
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3135,7 +3135,7 @@ GameObject:
   - component: {fileID: 239933728}
   - component: {fileID: 239933727}
   - component: {fileID: 239933726}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -3391,7 +3391,7 @@ GameObject:
   m_Component:
   - component: {fileID: 317143165}
   - component: {fileID: 317143166}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: FLC
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3627,7 +3627,7 @@ GameObject:
   m_Component:
   - component: {fileID: 570277964}
   - component: {fileID: 570277965}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: FRC
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3869,7 +3869,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!108 &705507994
 Light:
   m_ObjectHideFlags: 0
@@ -3881,7 +3881,7 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
+  m_Color: {r: 0.10881331, g: 0.122641504, b: 0.10355108, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
@@ -3892,7 +3892,7 @@ Light:
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
-    m_Bias: 0.05
+    m_Bias: 0.33
     m_NormalBias: 0.4
     m_NearPlane: 0.2
     m_CullingMatrixOverride:
@@ -3921,7 +3921,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 1
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -3941,7 +3941,7 @@ Transform:
   m_GameObject: {fileID: 705507993}
   serializedVersion: 2
   m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
-  m_LocalPosition: {x: 0.17, y: 2.71, z: -0.3}
+  m_LocalPosition: {x: 5.38, y: 15.72, z: -9.89}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4153,7 +4153,7 @@ GameObject:
   m_Component:
   - component: {fileID: 801634041}
   - component: {fileID: 801634042}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: BRC
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4393,7 +4393,7 @@ GameObject:
   - component: {fileID: 840042319}
   - component: {fileID: 840042318}
   - component: {fileID: 840042317}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: FLW
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7574,114 +7574,6 @@ LightingSettings:
   m_PVRTiledBaking: 0
   m_NumRaysToShootPerTexel: -1
   m_RespectSceneVisibilityWhenBakingGI: 0
---- !u!1 &948765489
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 948765492}
-  - component: {fileID: 948765491}
-  - component: {fileID: 948765490}
-  - component: {fileID: 948765493}
-  m_Layer: 0
-  m_Name: Main Camera
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!81 &948765490
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 948765489}
-  m_Enabled: 1
---- !u!20 &948765491
-Camera:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 948765489}
-  m_Enabled: 1
-  serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
-  m_projectionMatrixMode: 1
-  m_GateFitMode: 2
-  m_FOVAxisMode: 0
-  m_Iso: 200
-  m_ShutterSpeed: 0.005
-  m_Aperture: 16
-  m_FocusDistance: 10
-  m_FocalLength: 50
-  m_BladeCount: 5
-  m_Curvature: {x: 2, y: 11}
-  m_BarrelClipping: 0.25
-  m_Anamorphism: 0
-  m_SensorSize: {x: 36, y: 24}
-  m_LensShift: {x: 0, y: 0}
-  m_NormalizedViewPortRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
-  near clip plane: 0.3
-  far clip plane: 1000
-  field of view: 60
-  orthographic: 0
-  orthographic size: 5
-  m_Depth: 0
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_RenderingPath: -1
-  m_TargetTexture: {fileID: 0}
-  m_TargetDisplay: 0
-  m_TargetEye: 3
-  m_HDR: 1
-  m_AllowMSAA: 1
-  m_AllowDynamicResolution: 0
-  m_ForceIntoRT: 0
-  m_OcclusionCulling: 1
-  m_StereoConvergence: 10
-  m_StereoSeparation: 0.022
---- !u!4 &948765492
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 948765489}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0.2178022, y: -0, z: -0, w: 0.975993}
-  m_LocalPosition: {x: -1.89, y: 3.6, z: -6.11}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 25.16, y: 0, z: 0}
---- !u!114 &948765493
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 948765489}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 13c094ac46ab06242ac4e08aec268ccd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 1656418015}
-  offset: {x: 0, y: 0, z: -1}
-  smoothSpeed: 0.125
 --- !u!1 &967453842
 GameObject:
   m_ObjectHideFlags: 0
@@ -9940,7 +9832,7 @@ MeshCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
@@ -12732,7 +12624,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 79.95082, y: 1.8750113, z: 79.40145}
   m_Center: {x: 39.97541, y: -0.93750566, z: -39.700726}
@@ -12915,7 +12807,7 @@ GameObject:
   - component: {fileID: 1406375533}
   - component: {fileID: 1406375532}
   - component: {fileID: 1406375531}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: BRW
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18621,6 +18513,69 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1 &1644095489
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1644095491}
+  - component: {fileID: 1644095490}
+  m_Layer: 0
+  m_Name: NavMesh
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1644095490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1644095489}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 55
+  m_UseGeometry: 1
+  m_DefaultArea: 0
+  m_GenerateLinks: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_MinRegionArea: 2
+  m_NavMeshData: {fileID: 23800000, guid: 9b4ff03e7b2e003479dd695bf992de4a, type: 2}
+  m_BuildHeightMesh: 0
+--- !u!4 &1644095491
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1644095489}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1656418009
 GameObject:
   m_ObjectHideFlags: 0
@@ -18638,7 +18593,7 @@ GameObject:
   - component: {fileID: 1656418018}
   - component: {fileID: 1656418019}
   - component: {fileID: 1656418020}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Car
   m_TagString: Car
   m_Icon: {fileID: 0}
@@ -19083,7 +19038,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1715380411}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: WheelsMesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19123,7 +19078,7 @@ GameObject:
   - component: {fileID: 1760218045}
   - component: {fileID: 1760218044}
   - component: {fileID: 1760218043}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: BLW
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22085,7 +22040,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1762765190}
   - component: {fileID: 1762765191}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: BLC
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23823,7 +23778,6 @@ Transform:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 948765492}
   - {fileID: 705507995}
   - {fileID: 1235156275}
   - {fileID: 1530065918}
@@ -23832,3 +23786,4 @@ SceneRoots:
   - {fileID: 1796340473}
   - {fileID: 744375671}
   - {fileID: 1091309681}
+  - {fileID: 1644095491}
