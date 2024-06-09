@@ -14,6 +14,9 @@ public class CarController : MonoBehaviour
     public float maxSteerAngle = 15f;
     public float downforce = 100f;
 
+    public float constentTorque = 3000f;
+    public bool isControlable = false;
+
     private float currentAcceleration = 0f;
     private float currentBrakeForce = 0f;
     private float currentSteerAngle = 0f;
@@ -45,9 +48,18 @@ public class CarController : MonoBehaviour
             currentBrakeForce = 0f;
         }
 
-        // Apply acceleration to front wheels
-        FLW.motorTorque = 3000;
-        FRW.motorTorque = 3000;
+        // Apply acceleration to front wheels Set value
+        if(isControlable)
+        {
+            FLW.motorTorque = currentAcceleration;
+            FRW.motorTorque = currentAcceleration;
+        }
+        else
+        {
+            FLW.motorTorque = constentTorque;
+            FRW.motorTorque = constentTorque;
+        }
+        
 
         // Apply braking to all wheels
         FLW.brakeTorque = currentBrakeForce;
@@ -63,6 +75,6 @@ public class CarController : MonoBehaviour
         rb.AddForce(-transform.up * downforce * rb.velocity.magnitude);
 
         // Debug logging
-        Debug.Log($"Motor Torque: {FLW.motorTorque}, Brake Torque: {FLW.brakeTorque}, Steer Angle: {FLW.steerAngle}");
+        //Debug.Log($"Motor Torque: {FLW.motorTorque}, Brake Torque: {FLW.brakeTorque}, Steer Angle: {FLW.steerAngle}");
     }
 }
