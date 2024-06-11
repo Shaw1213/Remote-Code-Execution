@@ -17,6 +17,7 @@ public class Trap : MonoBehaviour
     {
         Debug.Log("Trap");
         carController.transform.position = ReStartPoint.position;
-        
+        carController.transform.eulerAngles = new Vector3(0, 180, 0);
+        carController.rb.velocity = new Vector3(0, 0, 0);
     }
 }

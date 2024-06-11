@@ -9,6 +9,8 @@ public class CarController : MonoBehaviour
     [SerializeField] WheelCollider BLW;
     [SerializeField] WheelCollider BRW;
 
+    [SerializeField] GameObject car;
+
     public float acceleration = 500f;
     public float brakingForce = 300f;
     public float maxSteerAngle = 15f;
@@ -17,11 +19,11 @@ public class CarController : MonoBehaviour
     public float constentTorque = 3000f;
     public bool isControlable = false;
 
-    private float currentAcceleration = 0f;
+    public float currentAcceleration = 0f;
     private float currentBrakeForce = 0f;
     private float currentSteerAngle = 0f;
 
-    private Rigidbody rb;
+    public Rigidbody rb;
 
     private void Start()
     {
@@ -74,6 +76,11 @@ public class CarController : MonoBehaviour
         // Apply downforce
         rb.AddForce(-transform.up * downforce * rb.velocity.magnitude);
 
+        // Set Z rotation back to 0
+        float currentX = car.transform.eulerAngles.x;
+        float currentY = car.transform.eulerAngles.y;
+        car.transform.eulerAngles = new Vector3(currentX, currentY, 0);
+        
         // Debug logging
         //Debug.Log($"Motor Torque: {FLW.motorTorque}, Brake Torque: {FLW.brakeTorque}, Steer Angle: {FLW.steerAngle}");
     }
