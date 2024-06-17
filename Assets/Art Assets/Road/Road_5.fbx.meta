@@ -1,14 +1,9 @@
 fileFormatVersion: 2
-guid: 273e223b279ac3446a47011a8c8eab4b
+guid: 3fdd2898e9d6c9d49bf84428191dacfd
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: RoadUV_1
-    second: {fileID: 2800000, guid: 9f89eb45116bbd54ea83565bdaee1b87, type: 3}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
