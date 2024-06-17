@@ -1,9 +1,19 @@
 fileFormatVersion: 2
-guid: 248c5195157698d429c9f765f6a5adb2
+guid: a693887a38f15904a8b800ae613348aa
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: PlayersVehicleUV
+    second: {fileID: 2800000, guid: db05962499df20c4b819dcc70cbc87f2, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: VehicleTireUV
+    second: {fileID: 2800000, guid: bf7e69a83645b304cbc6d1783cf8a38c, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
