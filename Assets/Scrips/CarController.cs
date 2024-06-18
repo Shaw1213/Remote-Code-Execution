@@ -9,7 +9,7 @@ public class CarController : MonoBehaviour
     [SerializeField] WheelCollider BLW;
     [SerializeField] WheelCollider BRW;
 
-    [SerializeField] GameObject car;
+    // [SerializeField] GameObject car;
 
     public float acceleration = 500f;
     public float brakingForce = 300f;
@@ -19,7 +19,7 @@ public class CarController : MonoBehaviour
     public float constentTorque = 3000f;
     public bool isControlable = false;
 
-    public float currentAcceleration = 0f;
+    private float currentAcceleration = 0f;
     private float currentBrakeForce = 0f;
     private float currentSteerAngle = 0f;
 
@@ -55,11 +55,15 @@ public class CarController : MonoBehaviour
         {
             FLW.motorTorque = currentAcceleration;
             FRW.motorTorque = currentAcceleration;
+            BLW.motorTorque = currentAcceleration;
+            BRW.motorTorque = currentAcceleration;
         }
         else
         {
             FLW.motorTorque = constentTorque;
             FRW.motorTorque = constentTorque;
+            BLW.motorTorque = constentTorque;
+            BRW.motorTorque = constentTorque;
         }
         
 
@@ -76,10 +80,10 @@ public class CarController : MonoBehaviour
         // Apply downforce
         rb.AddForce(-transform.up * downforce * rb.velocity.magnitude);
 
-        // Set Z rotation back to 0
-        float currentX = car.transform.eulerAngles.x;
-        float currentY = car.transform.eulerAngles.y;
-        car.transform.eulerAngles = new Vector3(currentX, currentY, 0);
+        // // Set Z rotation back to 0
+        // float currentX = car.transform.eulerAngles.x;
+        // float currentY = car.transform.eulerAngles.y;
+        // car.transform.eulerAngles = new Vector3(currentX, currentY, 0);
         
         // Debug logging
         //Debug.Log($"Motor Torque: {FLW.motorTorque}, Brake Torque: {FLW.brakeTorque}, Steer Angle: {FLW.steerAngle}");
