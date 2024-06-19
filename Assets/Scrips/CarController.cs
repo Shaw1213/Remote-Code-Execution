@@ -26,6 +26,7 @@ public class CarController : MonoBehaviour
     private float currentSteerAngle = 0f;
 
     public Rigidbody rb;
+    private SFXManager sfxManager; // Reference to the SFXManager
 
     private void Start()
     {
@@ -33,10 +34,31 @@ public class CarController : MonoBehaviour
         rb.useGravity = true;
         rb.isKinematic = false;
 
+        // Find the Type script in the scene
         typeScript = FindObjectOfType<Type>();
         if (typeScript == null)
         {
             Debug.LogError("Type script not found!");
+        }
+
+        // Find the SFXManager GameObject
+        GameObject sfxEngineObject = GameObject.Find("SFXEngine");
+
+        if (sfxEngineObject != null)
+        {
+            sfxManager = sfxEngineObject.GetComponent<SFXManager>();
+            if (sfxManager == null)
+            {
+                Debug.LogError("SFXManager component not found on the GameObject named 'SFXEngine'!");
+            }
+            else
+            {
+                sfxManager.PlayEngineSound(); // Start playing engine sound
+            }
+        }
+        else
+        {
+            Debug.LogError("GameObject named 'SFXEngine' not found!");
         }
     }
 
@@ -50,17 +72,7 @@ public class CarController : MonoBehaviour
             // Steering from horizontal axis
             currentSteerAngle = maxSteerAngle * Input.GetAxis("Horizontal");
         }
-        
-        // // Braking with Key Space
-        // if (Input.GetKey(KeyCode.Space))
-        // {
-        //     currentBrakeForce = brakingForce;
-        // }
-        // else
-        // {
-        //     currentBrakeForce = 0f;
-        // }
-        
+
         // Apply acceleration to front wheels Set value
         if (isControlable)
         {
