@@ -71,6 +71,16 @@ public class CarController : MonoBehaviour
 
             // Steering from horizontal axis
             currentSteerAngle = maxSteerAngle * Input.GetAxis("Horizontal");
+
+            // Braking from space bar
+            if (Input.GetKey(KeyCode.Space))
+            {
+                currentBrakeForce = brakingForce;
+            }
+            else
+            {
+                currentBrakeForce = 0f;
+            }
         }
 
         // Apply acceleration to front wheels Set value
@@ -107,6 +117,6 @@ public class CarController : MonoBehaviour
         float currentY = car.transform.eulerAngles.y;
         car.transform.eulerAngles = new Vector3(currentX, currentY, 0);
 
-        Debug.Log($"Motor Torque: {FLW.motorTorque}, Brake Torque: {FLW.brakeTorque}, Steer Angle: {FLW.steerAngle}");
+        //Debug.Log($"Motor Torque: {FLW.motorTorque}, Brake Torque: {FLW.brakeTorque}, Steer Angle: {FLW.steerAngle}");
     }
 }
