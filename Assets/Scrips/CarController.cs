@@ -11,6 +11,8 @@ public class CarController : MonoBehaviour
 
     [SerializeField] GameObject car;
 
+    [SerializeField] private Type typeScript;
+
     public float acceleration = 500f;
     public float brakingForce = 300f;
     public float maxSteerAngle = 15f;
@@ -30,28 +32,37 @@ public class CarController : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         rb.useGravity = true;
         rb.isKinematic = false;
+
+        typeScript = FindObjectOfType<Type>();
+        if (typeScript == null)
+        {
+            Debug.LogError("Type script not found!");
+        }
     }
 
     private void FixedUpdate()
     {
-        // Acceleration reverse/forward from vertical axis
-        currentAcceleration = acceleration * Input.GetAxis("Vertical");
-
-        // Steering from horizontal axis
-        currentSteerAngle = maxSteerAngle * Input.GetAxis("Horizontal");
-
-        // Braking with Key Space
-        if (Input.GetKey(KeyCode.Space))
+        if (typeScript == null || !typeScript.isTyping)
         {
-            currentBrakeForce = brakingForce;
-        }
-        else
-        {
-            currentBrakeForce = 0f;
-        }
+            // Acceleration reverse/forward from vertical axis
+            currentAcceleration = acceleration * Input.GetAxis("Vertical");
 
+            // Steering from horizontal axis
+            currentSteerAngle = maxSteerAngle * Input.GetAxis("Horizontal");
+        }
+        
+        // // Braking with Key Space
+        // if (Input.GetKey(KeyCode.Space))
+        // {
+        //     currentBrakeForce = brakingForce;
+        // }
+        // else
+        // {
+        //     currentBrakeForce = 0f;
+        // }
+        
         // Apply acceleration to front wheels Set value
-        if(isControlable)
+        if (isControlable)
         {
             FLW.motorTorque = currentAcceleration;
             FRW.motorTorque = currentAcceleration;
@@ -65,7 +76,6 @@ public class CarController : MonoBehaviour
             BLW.motorTorque = constentTorque;
             BRW.motorTorque = constentTorque;
         }
-        
 
         // Apply braking to all wheels
         FLW.brakeTorque = currentBrakeForce;
@@ -84,8 +94,7 @@ public class CarController : MonoBehaviour
         float currentX = car.transform.eulerAngles.x;
         float currentY = car.transform.eulerAngles.y;
         car.transform.eulerAngles = new Vector3(currentX, currentY, 0);
-        
-        Debug logging;
+
         Debug.Log($"Motor Torque: {FLW.motorTorque}, Brake Torque: {FLW.brakeTorque}, Steer Angle: {FLW.steerAngle}");
     }
 }
